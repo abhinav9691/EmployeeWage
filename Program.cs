@@ -21,7 +21,25 @@ switch (n)
 
         break;
     case 2:
-        Console.WriteLine("gdhdjd");
+        int is_full_time = 1;
+        int emp_rate_per_hour = 20;
+
+        int empHrs = 0;
+        int empWage = 0;
+        Random random1 = new Random();
+        int empCheck1 = random1.Next(0, 2);
+        Console.WriteLine(empCheck1);
+
+        if (empCheck1 == is_full_time)
+        {
+            empHrs = 8;
+        }
+        else
+        {
+            empHrs = 0;
+        }
+        empWage = empHrs * emp_rate_per_hour;
+        Console.WriteLine("Emp Wage " + empWage);
         break;
     default:
         Console.WriteLine("Wrong Input Entered");
